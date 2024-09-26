@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear & Clean Service - เข้าสู่ระบบ</title>
+    <style>
+        
+    </style>
+
+</head>
+<link rel="stylesheet" href="Usersstyle.css">
+
+<body>
+    <div class="container" id="role-selection">
+        <h1><img src="บ้าน.png" alt=""></h1>
+        <h1">Clear & Clean Service</h1>
+        <div class="role-selection">
+            
+            <div onclick="setRole('housekeeper')">แม่บ้าน</div>
+            <div onclick="setRole('user')">ผู้ใช้งาน</div>
+        </div>
+    </div>
+    <div class="container hidden" id="login-form">
+        <h1>เข้าสู่ระบบ</h1>
+        <form action="" method="post">
+            <input type="hidden" id="user-role" name="role">
+            <input type="text" name="username" placeholder="ชื่อผู้ใช้" required>
+            <input type="password" name="password" placeholder="รหัสผ่าน" required>
+            <input type="submit" value="เข้าสู่ระบบ" onclick = "alert('เข้าสู่ระบบไม่สำเร็จ')">
+            
+        </form>
+        <form action="Register.html">
+            <input type="submit" value="ลงทะเบียน">
+        </form>
+    </div>
+    <script>
+        function setRole(role) {
+            document.getElementById('user-role').value = role;
+            document.getElementById('role-selection').classList.add('hidden');
+            document.getElementById('login-form').classList.remove('hidden');
+        }
+    </script>
+    </form>
+</body>
+</html>
